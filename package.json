@@ -1,0 +1,34 @@
+{
+  "name": "rfc7469-node",
+  "version": "1.0.0",
+  "description": "Express middleware for HTTPS public key pinning (RFC 7469)",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run build && mocha --recursive --reporter spec --bail --check-leaks",
+    "build": "node ./node_modules/babel/bin/babel src -d lib && node ./node_modules/babel/bin/babel test-src -d test",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SomeoneWeird/rfc7469-node.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "https",
+    "pinning",
+    "public",
+    "key",
+    "7469",
+    "rfc7469"
+  ],
+  "author": "Adam Brady <adam@boxxen.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SomeoneWeird/rfc7469-node/issues"
+  },
+  "homepage": "https://github.com/SomeoneWeird/rfc7469-node",
+  "devDependencies": {
+    "babel": "^5.1.10"
+  }
+}
